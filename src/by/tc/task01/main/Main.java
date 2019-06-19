@@ -42,6 +42,14 @@ public class Main {
 		
 		appliance = service.find(criteriaVacuumCleaner);
 		PrintApplianceInfo.print(appliance);
+		
+		//////////////////////////////////////////////////////////////////
+		
+		Criteria criteriaNegativeTest = new Criteria("");
+		criteriaNegativeTest.add("display inches", "15");
+		
+		appliance = service.find(criteriaNegativeTest);
+		PrintApplianceInfo.print(appliance);
 
 	}
 
